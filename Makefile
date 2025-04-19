@@ -12,6 +12,9 @@ AUX = $(addprefix $(strip $(FILENAME)),$(strip $(EXT)))
 
 all: $(PDF)
 
+force: 
+	@$(MAKE) --always-make
+	
 view:
 	@open $(PDF)
 

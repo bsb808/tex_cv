@@ -29,15 +29,17 @@
 % Change the value in the second set of {} to you information. If you
 % want multiple lines (like for the address), use \\ to split lines.
 
-\newcommand{\myname}{First M. Last}     % your name
-\newcommand{\websiteurl}{{https://github.com/btskinner/tex_cv}} % your site url
+\newcommand{\myname}{Brian S. Bingham}     % your name
+%\newcommand{\websiteurl}{{https://github.com/btskinner/tex_cv}} % your site url
+\newcommand{\githuburl}{https://github.com/bsb808}
+\newcommand{\linkedinurl}{https://www.linkedin.com/in/briansbingham/}
 \newcommand{\websitename}{me.com}       % short url name for printing
-\newcommand{\phone}{000.000.0000}       % your phone number
-\newcommand{\email}{me@university.edu}  % your email
+\newcommand{\phone}{(831) 760-1670}       % your phone number
+\newcommand{\email}{briansbingham@gmail.com}  % your email
 \newcommand{\address}{                  % NB: Assumes 3 lines
-  University Hall \\                    % {BUILDING} \\
-  PO Box 00000 \\                       % {ADDRESS} \\
-  City, ST 00000                        % {CITY, ST ZIP}
+  Watkins Hall 331\\                    % {BUILDING} \\
+  1 University Way\\                       % {ADDRESS} \\
+  Monterey, CA 93950                        % {CITY, ST ZIP}
 }
 
 % ======================================
@@ -295,15 +297,19 @@ language=american]{biblatex}      % for reference sections
   \vspace{-2em}
   {\LARGE\scshape \myname} \\
 \end{center}
-\begin{minipage}[t]{.6\linewidth}
+\begin{minipage}[t]{0.4\linewidth}
 \address
 \end{minipage}
 \hspace*{-\parindent}%
-\begin{minipage}[t]{.43\linewidth}
+\begin{minipage}[t]{0.6\linewidth}
 \begin{flushright}
-  \textit{tel}: \phone \\
-  \textit{web}: \href{\websiteurl}{\websitename} \\
-  \textit{email}: \href{mailto:\email}{\email}
+  \textit{Email}: \href{mailto:\email}{\email} \\
+  \textit{Phone}: \phone \\
+  \textit{GitHub}: \href{\githuburl}{\githuburl} \\
+  \textit{LinkedIn}: \href{\linkedinurl}{\linkedinurl} \\
+  %\textit{tel}: \phone \\
+  %\textit{web}: \href{\websiteurl}{\websitename} \\
+  %\textit{email}: \href{mailto:\email}{\email}
 \end{flushright}
 \end{minipage}
 \begin{center}
@@ -316,28 +322,26 @@ language=american]{biblatex}      % for reference sections
 % ==============================================================================
 
 % ======================================
-% APPOINTMENTS
-% ======================================
-
-% Uncomment to add if you have a current appointment.
-
-% \section*{Academic Appointment}
-% \begin{tabularx}{\linewidth}{\twocols}
-%   2018 - present & Assistant Professor of University, University of
-%   University City \\
-% \end{tabularx}
-
-% ======================================
 % EDUCATION
 % ======================================
 
 % Use tabularx (for flexible spacing) to align nicely
 
 \section*{Education}
-\begin{tabularx}{\linewidth}{\threecols}
-  YYYY&Program, University&Ph.D. \\ % or YYYY (expected)
-  YYYY&Program, University&M.A. \\
-  YYYY&Program, University&B.A. \\
+\renewcommand{\arraystretch}{1.5} % Default value: 1
+\begin{tabularx}{\linewidth}{>{\RR}p{0.5in}>{\RR}X>{\RL}p{1in}}
+  2003 & \renewcommand{\arraystretch}{1} \begin{tabular}[t]{@{}l@{}}Massachusetts Institute Technology, Mechanical Engineering.
+          \\ Committee: Warren Seering, David Mindell and Dana Yoerger.
+          \\ Dissertation: \textit{Precision Autonomous Underwater Navigation}.
+          \end{tabular} & Ph.D. \\ % or YYYY (expected)
+          \renewcommand{\arraystretch}{1.5} 
+  1998 & \renewcommand{\arraystretch}{1}  \begin{tabular}[t]{@{}l@{}}
+            Massachusetts Institute Technology, Mechanical Engineering.
+            \\ Thesis: \textit{Structural-acoustic design and control of } 
+            \\ \hspace{4em}\textit{an integrally actuated composite panel.}
+          \end{tabular} & M.S. \\
+          \renewcommand{\arraystretch}{1.5} 
+  1996 & \renewcommand{\arraystretch}{1} \begin{tabular}[t]{@{}l@{}}Missouri University of Science and Technology, Mechanical Engineering. \end{tabular} & B.S. \\
 \end{tabularx}
 
 % ======================================
@@ -349,12 +353,28 @@ language=american]{biblatex}      % for reference sections
 \section*{Research Interests}
 
 \hspace{-.25em}\begin{itemize*}[itemjoin={{; }}, label={}]
-\item Interest 1
-\item interest 2
-\item interest 3
-\item interest 4
-\item interest 5
+\item Robotics and autonomous vehicles
+\item Navigation and control
+\item Reinforcement learning
 \end{itemize*}
+
+% ======================================
+% APPOINTMENTS
+% ======================================
+
+% Uncomment to add if you have a current appointment.
+
+\section*{Academic Appointments}
+\begin{tabularx}{\linewidth}{\twocols}
+  2019--present & Professor, Department of Mechanical and Aerospace Engineering, Naval Postgraduate School. \\
+  2022--2024& Department Chair, Mechanical and Aerospace Engineering, Naval Postgraduate School. \\
+  2015--2019 & Associate Professor, Department of Mechanical and Aerospace Engineering, Naval Postgraduate School. \\
+  2013--2015 & Associate Professor, Department of Mechanical Engineering, University of Hawaii at Manoa. \\
+  2009--2013 & Assistant Professor, Department of Mechanical Engineering, University of Hawaii at Manoa. \\
+  2005--2008 & Assistant Professor, Franklin W. Olin College of Engineering \\
+  2004--2005 & Postdoctoral Investigator, Woods Hole Oceanographic Institution. 
+ \end{tabularx}
+
 
 % ======================================
 % PUBLICATIONS

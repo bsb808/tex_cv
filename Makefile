@@ -14,7 +14,7 @@ all: $(PDF)
 
 force: 
 	@$(MAKE) --always-make
-	
+
 view:
 	@open $(PDF)
 

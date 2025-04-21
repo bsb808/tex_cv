@@ -1,3 +1,27 @@
+## 
+
+Install latest biber (2.20)
+
+* Download - https://sourceforge.net/projects/biblatex-biber/
+* Uncompress - should be just one file
+* sudo rsync -azvv biber /usr/bin/
+
+Install biblatex 3.20
+
+* Download - https://sourceforge.net/projects/biblatex/files/biblatex-3.20/
+
+
+See https://tex.stackexchange.com/questions/84624/how-to-upgrade-biblatex-properly
+
+See biber and biblatex compatiblity matrx: https://texdoc.org/serve/biber.pdf/0
+
+
+How to check the version of biblatex: 
+* kpsewhich -all biblatex.sty
+* then cat the file returned by this command.  Near the top is the version number.  I found 3.17
+
+## Original
+
 [Make an academic CV using LaTeX and Biber with LaTeX +
 Biber](https://github.com/btskinner/tex_cv). Rather than adding new
 publications, working papers, or presentations by hand over time,
